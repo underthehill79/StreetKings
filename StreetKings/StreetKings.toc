@@ -1,0 +1,5 @@
+## Interface: 30300
+## Title: StreetKings
+## Notes: Buff bystanders with Blessing of Kings (Paladin only)
+## Version: 1.0
+StreetKings.lua
