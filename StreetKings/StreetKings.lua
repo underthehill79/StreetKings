@@ -100,7 +100,7 @@ local function GetBystandersMissingKings()
 
             -- Second: all buff / aura / group / range checks combined
             if not groupNames[name]
-               and not HasHardcoreAura(unit)
+               and not HasNonSoftcoreAura(unit)
                and not HasKings(unit)
                and IsSpellInRange(kingsName, unit) == 1 then
 
