@@ -51,21 +51,12 @@ local function HasKings(unit)
     return false
 end
 
--- Check if a unit has any aura (buff or debuff) with "hardcore" in its name (case-insensitive)
-local function HasHardcoreAura(unit)
-    -- Check buffs
-    for i = 1, 40 do
-        local name = UnitBuff(unit, i)
-        if not name then break end
-        if string.find(string.lower(name), "hardcore") or string.find(string.lower(name), "ironman") then
-            return true
-        end
-    end
+local function HasNonSoftcoreAura(unit)
     -- Check debuffs
     for i = 1, 40 do
         local name = UnitDebuff(unit, i)
         if not name then break end
-        if string.find(string.lower(name), "hardcore") or string.find(string.lower(name), "ironman") then
+        if string.find(string.lower(name), "hardcore") or string.find(string.lower(name), "ironman") or string.find(string.lower(name), "prestige") then
             return true
         end
     end
