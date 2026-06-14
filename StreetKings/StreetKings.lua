@@ -56,7 +56,7 @@ local function HasNonSoftcoreAura(unit)
     for i = 1, 40 do
         local name = UnitDebuff(unit, i)
         if not name then break end
-        if string.find(string.lower(name), "hardcore") or string.find(string.lower(name), "ironman") or string.find(string.lower(name), "prestige") then
+        if string.find(string.lower(name), "hardcore") or string.find(string.lower(name), "ironman") or string.find(string.lower(name), "prestige") or string.find(string.lower(name), "nightmare") then
             return true
         end
     end
